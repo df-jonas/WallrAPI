@@ -15,4 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/event/{eventid}', 'EventsController@index');
+Route::get('/event/{eventid}', 'EventsController@Index');
