@@ -13,6 +13,44 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+/*
+=============== USERS ===============
+*/
+
+/** User: post data to retrieve tokens */
+Route::middleware('auth:api')->post('/user', 'UsersController@Register');
+
+/** User: get current user */
+Route::middleware('auth:api')->post('/me', 'UsersController@Me');
+
+/*
+=============== EVENTS ===============
+*/
+
+/** Event: get all events from user */
+Route::middleware('auth:api')->get('/events', 'EventsController@GetAll');
+
+/** Event: get one event from user */
+Route::middleware('auth:api')->get('/events/{id}', 'EventsController@GetOne');
+
+/** Event: create an event for user */
+Route::middleware('auth:api')->post('/events', 'EventsController@Create');
+
+/** Event: update an event from user */
+Route::middleware('auth:api')->post('/events/{id}', 'EventsController@Update');
+
+/*
+=============== TEXTS ===============
+*/
+
+/** Text: get all texts for event */
+Route::get('/texts/{event_id}', 'TextsController@GetAll');
+Route::post('/texts/ack/{event_id}', 'TextsController@Ack');
+
+/** Text: create an event for user */
+Route::middleware('auth:api')->post('/texts', 'TextsController@Create');
+
+
+
+
+
