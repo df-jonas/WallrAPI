@@ -18,7 +18,7 @@ use Illuminate\Http\Request;
 */
 
 /** User: post data to retrieve tokens */
-Route::middleware('auth:api')->post('/user', 'UsersController@Register');
+Route::post('/user', 'UsersController@Register');
 
 /** User: get current user */
 Route::middleware('auth:api')->post('/me', 'UsersController@Me');
@@ -47,7 +47,7 @@ Route::middleware('auth:api')->post('/events/{id}', 'EventsController@Update');
 Route::get('/texts/{event_id}', 'TextsController@GetAll');
 Route::post('/texts/ack/{event_id}', 'TextsController@Ack');
 
-/** Text: create an event for user */
+/** Text: create a text for user */
 Route::middleware('auth:api')->post('/texts', 'TextsController@Create');
 
 
