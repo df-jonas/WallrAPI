@@ -25,10 +25,20 @@ class TextsController extends Controller
     public function GetAll(Request $request, $event_id)
     {
         if (isset($event_id)) {
+
+            $event = null;
+
             if (Event::find($event_id) != null) {
+                $event = Event::find($event_id);
+            }
+            else if (Event::query()->where('public_event_id', '=', $event_id)->first() != null) {
+                $event = Event::query()->where('public_event_id', '=', $event_id)->first();
+            }
+
+            if ($event != null) {
                 $texts = Text::query()
                     ->orderBy('id', 'desc')
-                    ->where('event_id', '=', $event_id)
+                    ->where('event_id', '=', $event->id)
                     ->get()
                     ->makeVisible('source');
 
