@@ -6,7 +6,7 @@
             <div class="row h-100">
                 <div class="col-lg-7 my-auto">
                     <div class="header-content mx-auto">
-                        <h1 class="mb-5">WallR bied je de mogelijkheid makkelijk een SMS-wall op te zetten, zodat jij tijd hebt voor de moeilijke zaken.</h1>
+                        <h1 class="mb-5">WallR biedt je de mogelijkheid makkelijk een SMS-wall op te zetten, zodat jij tijd hebt voor de moeilijke zaken.</h1>
                         <a href="#download" class="btn btn-outline btn-xl js-scroll-trigger">Start nu gratis!</a>
                     </div>
                 </div>
