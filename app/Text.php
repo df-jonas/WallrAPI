@@ -25,5 +25,5 @@ class Text extends Model
 {
     protected $table = 'texts';
 
-    protected $hidden = ['source', 'created_at', 'updated_at'];
+    protected $hidden = ['source', 'updated_at'];
 }
