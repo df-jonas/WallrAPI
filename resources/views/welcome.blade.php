@@ -142,7 +142,7 @@
             <h2>We
                 <i class="fa fa-heart"></i>
                 our users!</h2>
-            <p>Visit us and collaborate on Github!</p>
+            <p>Bezoek ons en help mee via Github!</p>
             <ul class="list-inline list-social">
                 <li class="list-inline-item social-github">
                     <a href="https://github.com/df-jonas" target="_blank">
