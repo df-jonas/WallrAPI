@@ -58,7 +58,7 @@
                     </div>
                     -->
                     <br>
-                    <a class="btn btn-outline jn-green btn-xl" href="{{ asset('download/wallr-1.0.0.apk') }}" target="_blank">Download the .apk</a>
+                    <a class="btn btn-outline jn-green btn-xl" href="{{ asset('download/wallr-1.0.0.apk') }}" target="_blank">Download het .apk-bestand</a>
                 </div>
             </div>
         </div>
