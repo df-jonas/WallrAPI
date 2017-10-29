@@ -51,10 +51,12 @@
                 <div class="col-md-8 mx-auto">
                     <h2 class="section-heading">Ontdek de app!</h2>
                     <p>Onze app is beschikbaar op elk mobiel apparaat! Download de app om te starten.</p>
+                    <!--
                     <div class="badges">
                         <a class="badge-link" href="http://play.google.com/store/search?q=wallr&c=apps" target="_blank"><img
-                                    src="{{ asset('img/google-play-badge.svg') }}" alt=""></a>
+                                    src="asset('img/google-play-badge.svg')" alt=""></a>
                     </div>
+                    -->
                     <br>
                     <a class="btn btn-outline jn-green btn-xl" href="{{ asset('download/wallr-1.0.0.apk') }}" target="_blank">Or download the .apk</a>
                 </div>
