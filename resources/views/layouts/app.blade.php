@@ -77,7 +77,7 @@ THE SOFTWARE.
     <link rel="stylesheet" href="{{ asset('css/device-mockups.css') }}">
 
     <!-- Custom styles for this template -->
-    <link href="{{ asset('css/new-age.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/new-age.css') }}" rel="stylesheet">
 
 </head>
 
@@ -89,12 +89,13 @@ THE SOFTWARE.
         <a class="navbar-brand js-scroll-trigger" href="#page-top">{{ config('app.name', 'Laravel') }}</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                 data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-                aria-label="Toggle navigation">
-            Menu
-            <i class="fa fa-bars"></i>
+                aria-label="Toggle navigation">Menu<i class="fa fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#about">About</a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="#download">Download</a>
                 </li>
@@ -113,16 +114,13 @@ THE SOFTWARE.
 
 <footer>
     <div class="container">
-        <p>Copyright © {{ date('Y') }} WallR. All Rights Reserved.</p>
+        <p>Copyright © {{ date('Y') }} <a href="https://defrere.be">Jonas De Frère</a>. All Rights Reserved.</p>
         <ul class="list-inline">
             <li class="list-inline-item">
-                <a href="#">Privacy</a>
+                <a href="https://github.com/df-jonas/WallrApp"><i class="fa fa-github"></i> App</a>
             </li>
             <li class="list-inline-item">
-                <a href="#">Terms</a>
-            </li>
-            <li class="list-inline-item">
-                <a href="#">FAQ</a>
+                <a href="https://github.com/df-jonas/WallrAPI"><i class="fa fa-github"></i> API</a>
             </li>
         </ul>
     </div>
