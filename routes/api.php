@@ -21,7 +21,7 @@ use Illuminate\Http\Request;
 Route::post('/user', 'UsersController@Register');
 
 /** User: get current user */
-Route::middleware('auth:api')->post('/me', 'UsersController@Me');
+Route::middleware('auth:api')->get('/me', 'UsersController@Me');
 
 /*
 =============== EVENTS ===============

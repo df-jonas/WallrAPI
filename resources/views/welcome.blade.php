@@ -51,12 +51,14 @@
                 <div class="col-md-8 mx-auto">
                     <h2 class="section-heading">Ontdek de app!</h2>
                     <p>Onze app is beschikbaar op elk mobiel apparaat! Download de app om te starten.</p>
+                    <!--
                     <div class="badges">
                         <a class="badge-link" href="http://play.google.com/store/search?q=wallr&c=apps" target="_blank"><img
-                                    src="{{ asset('img/google-play-badge.svg') }}" alt=""></a>
+                                    src="asset('img/google-play-badge.svg')" alt=""></a>
                     </div>
+                    -->
                     <br>
-                    <a class="btn btn-outline jn-green btn-xl" href="{{ asset('download/wallr-1.0.0.apk') }}" target="_blank">Or download the .apk</a>
+                    <a class="btn btn-outline jn-green btn-xl" href="{{ asset('download/wallr-1.0.0.apk') }}" target="_blank">Download the .apk</a>
                 </div>
             </div>
         </div>
@@ -142,7 +144,7 @@
             <h2>We
                 <i class="fa fa-heart"></i>
                 our users!</h2>
-            <p>Visit us and collaborate on Github!</p>
+            <p>Bezoek ons en help mee via Github!</p>
             <ul class="list-inline list-social">
                 <li class="list-inline-item social-github">
                     <a href="https://github.com/df-jonas" target="_blank">

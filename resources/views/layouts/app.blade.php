@@ -105,6 +105,9 @@ THE SOFTWARE.
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="https://github.com/df-jonas/WallrApp">Github</a>
+                </li>
             </ul>
         </div>
     </div>
@@ -114,7 +117,7 @@ THE SOFTWARE.
 
 <footer>
     <div class="container">
-        <p>Copyright © {{ date('Y') }} <a href="https://defrere.be">Jonas De Frère</a>. All Rights Reserved.</p>
+        <p>Copyright © {{ date('Y') }} <a href="https://defrere.be">Jonas De Frère</a>. Alle rechten voorbehouden.</p>
         <ul class="list-inline">
             <li class="list-inline-item">
                 <a href="https://github.com/df-jonas/WallrApp"><i class="fa fa-github"></i> App</a>

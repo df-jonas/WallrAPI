@@ -215,6 +215,10 @@ header.masthead .device-container .screen img {
     }
 }
 
+section.about p {
+    text-align: justify;
+}
+
 section.download {
     position: relative;
     padding: 150px 0;
