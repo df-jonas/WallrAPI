@@ -19,9 +19,9 @@ class EventsController extends Controller
      * Returns home view.
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function Index()
+    public function Index($eventid)
     {
-        return view('event');
+        return view('event', ['eventid' => $eventid]);
     }
 
     /**

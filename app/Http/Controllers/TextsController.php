@@ -57,6 +57,42 @@ class TextsController extends Controller
         return response()->json(['statuscode' => 400, 'message' => "@param 'id' not present."], 400);
     }
 
+    public function GetAllPost(Request $request, $event_id, $last_msg_id)
+    {
+        if (isset($event_id)) {
+
+            $event = null;
+
+            if (Event::find($event_id) != null && isset($last_msg_id)) {
+                $event = Event::find($event_id);
+            }
+            else if (Event::query()->where('public_event_id', '=', $event_id)->first() != null) {
+                $event = Event::query()->where('public_event_id', '=', $event_id)->first();
+            }
+
+            if ($event != null) {
+                $texts = Text::query()
+                    ->orderBy('id', 'desc')
+                    ->where('event_id', '=', $event->id)
+                    ->where('id', '>', $last_msg_id)
+                    ->get()
+                    ->makeVisible('source');
+
+                $max = sizeof($texts);
+                for ($i = 0; $i < $max; $i++) {
+                    $texts[$i]->source = StringHelper::mask($texts[$i]->source, '*');
+                }
+
+                if (isset($request->amount) && $request->amount > 0) {
+                    return $texts->take($request->amount);
+                }
+                return $texts;
+            }
+            return response()->json(['statuscode' => 401, 'message' => "This event may not exist."], 401);
+        }
+        return response()->json(['statuscode' => 400, 'message' => "Some @params were not present."], 400);
+    }
+
     /**
      * Creates a new text
      * @param Request $request

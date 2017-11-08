@@ -45,6 +45,7 @@ Route::middleware('auth:api')->post('/events/{id}', 'EventsController@Update');
 
 /** Text: get all texts for event */
 Route::get('/texts/{event_id}', 'TextsController@GetAll');
+Route::post('/texts/{event_id}/{last_msg_id}', 'TextsController@GetAllPost');
 
 /** Text: create a text for user */
 Route::middleware('auth:api')->post('/texts/{event_id}', 'TextsController@Create');
