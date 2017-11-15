@@ -18,7 +18,7 @@ use Illuminate\Http\Request;
 */
 
 /** User: post data to retrieve tokens */
-Route::post('/user', 'UsersController@Register');
+Route::post('/register', 'UsersController@Register');
 
 /** User: get current user */
 Route::middleware('auth:api')->get('/me', 'UsersController@Me');
