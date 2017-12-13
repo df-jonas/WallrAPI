@@ -52,19 +52,21 @@ class EventsController extends Controller
     }
 
     /**
-     * Creates an event if user is logged in and a 'name' in the request is provided.
+     * Creates an event if user is logged in and 'name', 'keyword' and 'phone' are provided in the request.
      * @param Request $request
      * @return Event Created event
      */
     public function Create(Request $request)
     {
-        if (isset($request->name)) {
+        if (isset($request->name) && isset($request->keyword) && isset($request->phone)) {
 
             $event = new Event;
 
             $event->user_id = Auth::user()->id;
             $event->name = $request->name;
             $event->public_event_id = $this->getUniquePublicID();
+            $event->keyword = $request->keyword;
+            $event->phone = $request->phone;
 
             $event->save();
 
@@ -88,6 +90,14 @@ class EventsController extends Controller
 
                 if (isset($request->name)) {
                     $event->name = $request->name;
+                }
+
+                if (isset($request->keyword)) {
+                    $event->keyword = $request->keyword;
+                }
+
+                if (isset($request->phone)) {
+                    $event->phone = $request->phone;
                 }
 
                 if (isset($request->renew) && $request->renew == "y") {
