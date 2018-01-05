@@ -12,6 +12,7 @@ use App\Event;
 use App\Helpers\SecurityHelper;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
 
 class EventsController extends Controller
 {
@@ -21,7 +22,23 @@ class EventsController extends Controller
      */
     public function Index($eventid)
     {
-        return view('event', ['eventid' => $eventid]);
+        $event = null;
+
+        if (Event::find($eventid) != null) {
+            $event = Event::find($eventid);
+        } else if (Event::query()->where('public_event_id', '=', $eventid)->first() != null) {
+            $event = Event::query()->where('public_event_id', '=', $eventid)->first();
+        }
+
+        if ($event == null)
+            return Redirect::to("/");
+
+        return view('event', [
+            'eventid' => $eventid,
+            'eventname' => $event->name,
+            'keyword' => $event->keyword,
+            'phone' => $event->phone
+        ]);
     }
 
     /**

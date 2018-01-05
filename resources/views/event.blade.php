@@ -83,6 +83,11 @@ THE SOFTWARE.
         <a class="navbar-brand" href="https://wallr.eu">WallR</a>
     </div>
 </nav>
+<div style="background-color: grey; color: white; font-weight: bold; padding: 1em 0 0.3em 0;">
+    <div class="container">
+        <p class="text-center">Send "{{ strtoupper($keyword) }} YOURMESSAGE" to {{ $phone }} to let it display on this wall.</p>
+    </div>
+</div>
 
 <div class="container">
     <div id="msg-container" class="row btn-sm">
